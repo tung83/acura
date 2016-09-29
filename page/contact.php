@@ -1,7 +1,8 @@
 <?php
+include_once phpLib.'PHPMailer/PHPMailerAutoload.php';
 class contact{
     private $db,$view,$lang;
-    private $post_result;
+    private $post_result,$basic_config;
     function __construct($db,$lang='vi'){
         $this->db=$db;
         $this->db->reset();
@@ -12,7 +13,8 @@ class contact{
             $this->view=$item['e_view'];
         }else{
             $this->view=$item['view'];
-        }
+        }        
+        $this->basic_config=$this->db->getOne('basic_config','smtp_server, smtp_port, smtp_user, smtp_pwd, smtp_sender_email, smtp_sender_name, smtp_receiver, gmap_script');
     }
     function breadcrumb(){
         $this->db->reset();
@@ -45,14 +47,16 @@ class contact{
                 'dates'=>date("Y-m-d H:i:s")
             );
             try{
-                //$this->send_mail($insert);
+                $this->send_mail($insert);
                 $this->db->insert('contact',$insert);
-               $this->post_result = ' <div class="alert alert-success">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Thành công!</strong>  Thông tin của Quý Khách đã gửi thành công . Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!.
-                      </div>';
+                if(!$this->post_result){
+                    $this->post_result = ' <div class="alert alert-success">
+                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                             <strong>Thành công!</strong>  Thông tin của Quý Khách đã gửi thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!.
+                           </div>';
+                }
             }catch(Exception $e){
-                $this->post_result = ' <div class="alert alert-warning">
+                $this->post_result .= ' <div class="alert alert-warning">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Lỗi!</strong> '. $e->errorInfo() .
                       '</div>'; 
@@ -104,7 +108,7 @@ class contact{
                             </div>   
                             <div class="form-group">
                                 <label>Địa Chỉ</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="adds" class="form-control">
                             </div>      
                             <div class="form-group">
                                 <label>Chủ Đề *</label>
@@ -113,7 +117,7 @@ class contact{
                             </div>
                             <div class="form-group">
                                 <label>Nội Dung Tin Nhắn *</label>
-                                <textarea name="message" id="message" required class="form-control" rows="8"></textarea>
+                                <textarea name="content" id="message" required class="form-control" rows="8"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>                        
                             <div class="form-group">
@@ -135,7 +139,7 @@ class contact{
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="gmap">'
-                                . $this->get_GoogleMap()
+                                . $this->basic_config['gmap_script']
                             .'</div>
                         </div>
                     </div>
@@ -145,17 +149,28 @@ class contact{
         return $str;
     }
     function send_mail($item){
+       
         //Create a new PHPMailer instance
-        $mail = new PHPMailer;
-        $mail->setFrom('info@quangdung.com.vn', 'Website administrator');
-        //Set an alternative reply-to address
-        $mail->addReplyTo($item['email'], $item['name']);
-        //Set who the message is to be sent to
-        $mail->addAddress('czanubis@gmail.com');
-        //Set the subject line
-        $mail->isHTML(true);
+        //'basic_config','smtp_server, smtp_port, , , , , ,
+        $mail = new PHPMailer(); // create a new object
+        $mail->IsSMTP(); // enable SMTP
+        //$mail->SMTPDebug = 2;
+        //Ask for HTML-friendly debug output
+        //$mail->Debugoutput = 'html';
+        //$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail        
+        //Whether to use SMTP authentication
+        $mail->SMTPAuth = true;
+        $mail->Host = $this->basic_config['smtp_server'];
+        $mail->Port = $this->basic_config['smtp_port']; // or 587
+        $mail->IsHTML(true);
+        $mail->Username = $this->basic_config['smtp_user'];
+        $mail->Password = $this->basic_config['smtp_pwd'];
+        $mail->SetFrom($this->basic_config['smtp_user'], $this->basic_config['smtp_sender_name']);
+        $mail->AddAddress($this->basic_config['smtp_receiver']);
+        $mail->SMTPAutoTLS = false;
         $mail->CharSet = 'UTF-8';
-        $mail->Subject =  'Contact sent from website';
+        $mail->Subject =  'Khách hàng liên hệ gửi từ website';
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
         //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
@@ -169,31 +184,20 @@ class contact{
         	<p>Full Name: '.$item['name'].'</p>
         	
         	<p>Address: '.$item['adds'].'</p>
-        	<p>Phone: '.$item['phone'].'</p>
-        	
+        	<p>Phone: '.$item['phone'].'</p>        	
         	<p>Email: '.$item['email'].'</p>
-            <p>Tiêu Đề: '.$item['fax'].'</p>
+                <p>Tiêu Đề: '.$item['subject'].'</p>
         	<p>Content: '.nl2br($item['content']).'</p>
         </body>
         </html>
-        ';
-        //Attach an image file
-        //$mail->addAttachment('images/phpmailer_mini.png');
-        
-        //send the message, check for errors
-        //$mail->send();
-        if ($mail->send()) {
-            echo "Message sent!";
-        } else {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+        ';        
+            
+        if (!$mail->send()) {
+             $this->post_result = ' <div class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Lỗi!</strong> Mailer Error:' . $mail->ErrorInfo.
+                      '</div>'; 
         }
-    }
-    
-    function get_GoogleMap(){
-        $basic_config=$this->db->where('id',1)->getOne('basic_config','gmap_script');
-        return $basic_config['gmap_script'];
-   
-   
     }
      
 }
