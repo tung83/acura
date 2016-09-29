@@ -134,9 +134,9 @@ class contact{
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <div class="gmap">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1633799912497!2d106.65656091421477!3d10.798795861734689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293132fa9845%3A0x2b09637f85d4a12f!2zVHLGsOG7nW5nIE3huqdtIE5vbiBUw6JuIFPGoW4gTmjhuqV0!5e0!3m2!1svi!2s!4v1474100962959" width="1004" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            </div>
+                            <div class="gmap">'
+                                . $this->get_GoogleMap()
+                            .'</div>
                         </div>
                     </div>
                 </div>
@@ -188,5 +188,13 @@ class contact{
             echo "Mailer Error: " . $mail->ErrorInfo;
         }
     }
+    
+    function get_GoogleMap(){
+        $basic_config=$this->db->where('id',1)->getOne('basic_config','gmap_script');
+        return $basic_config['gmap_script'];
+   
+   
+    }
+     
 }
 ?>
