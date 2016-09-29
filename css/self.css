@@ -21,6 +21,7 @@ body{
     background:#fff !important
 }
 
+
 @media (min-width: 768px) {
 .col-sm-15 {
         width: 20%;
@@ -336,4 +337,10 @@ h2.title{
     .container{
         width:1004px
     }
+}
+
+.mfp-img-mobile.mfp-ready > div > div.mfp-content > div > figure > img{    
+    background-color: #fff;
+    padding: 0;
+    margin: 40px 0;
 }
