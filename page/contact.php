@@ -1,6 +1,7 @@
 <?php
 class contact{
     private $db,$view,$lang;
+    private $post_result;
     function __construct($db,$lang='vi'){
         $this->db=$db;
         $this->db->reset();
@@ -31,7 +32,7 @@ class contact{
     }
     function contact_insert(){
         $this->db->reset();
-        if(isset($_POST['contact_send'])){
+        if(isset($_POST['submit'])){
             $name=htmlspecialchars($_POST['name']);
             $adds=htmlspecialchars($_POST['adds']);
             $phone=htmlspecialchars($_POST['phone']);
@@ -45,13 +46,16 @@ class contact{
             );
             try{
                 //$this->send_mail($insert);
-                $this->db->insert('contact',$insert);                
-               // header('Location:'.$_SERVER['REQUEST_URI']);
-               echo '<script>alert("Thông tin của bạn đã được gửi đi, BQT sẽ phản hồi sớm nhất có thể, Xin cám ơn!");
-                    location.href="'.$_SERVER['REQUEST_URI'].'"
-               </script>';
+                $this->db->insert('contact',$insert);
+               $this->post_result = ' <div class="alert alert-success">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Thành công!</strong>  Thông tin của Quý Khách đã gửi thành công . Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!.
+                      </div>';
             }catch(Exception $e){
-                echo $e->errorInfo();
+                $this->post_result = ' <div class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Lỗi!</strong> '. $e->errorInfo() .
+                      '</div>'; 
             }
         }
     }
@@ -61,8 +65,13 @@ class contact{
         $item=$this->db->where('id',3)->getOne('qtext','content');
         $str.='    
         <section id="contact-page">
-            <div class="container">
-                <div class="text-center">        
+            <div class="container">';
+                if($this->post_result != '')
+                {
+                    $str.= $this->post_result;
+                }
+                
+                $str.='<div class="text-center">        
                     <h2 class="title">LIÊN HỆ</h2>
                     <p class="lead">Hãy điền thông tin và tin nhắn quý khách, BQT sẽ trả lời sớm nhất có thể.</p>
                 </div>  
