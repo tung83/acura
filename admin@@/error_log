@@ -1,0 +1,58 @@
+[01-Aug-2016 23:15:57 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[01-Aug-2016 23:15:57 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[07-Aug-2016 22:32:33 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[07-Aug-2016 22:32:33 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[11-Aug-2016 23:04:00 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[11-Aug-2016 23:04:00 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[12-Aug-2016 08:35:22 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[12-Aug-2016 08:35:22 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[12-Aug-2016 15:52:02 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[12-Aug-2016 15:52:02 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[13-Aug-2016 10:56:52 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[13-Aug-2016 10:56:52 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 17:40:46 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 17:40:46 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 22:08:01 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 22:08:01 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 22:31:40 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[14-Aug-2016 22:31:40 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 14:00:18 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 14:00:18 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 20:22:21 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 20:22:21 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 20:56:41 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[15-Aug-2016 20:56:41 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[17-Aug-2016 09:51:12 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[17-Aug-2016 09:51:12 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[17-Aug-2016 22:22:01 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[17-Aug-2016 22:22:01 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[23-Aug-2016 07:01:02 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[23-Aug-2016 07:01:02 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[23-Aug-2016 07:56:39 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) in /home/lavoine/public_html/admin@@/index.php on line 64
+[23-Aug-2016 07:56:39 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/lavoine/public_html/admin@@/index.php on line 64
+[23-Sep-2016 11:29:32 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'psmedia'@'localhost' (using password: NO) in /home/psmedia/public_html/acura/admin@@/index.php on line 64
+[23-Sep-2016 11:29:32 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/psmedia/public_html/acura/admin@@/index.php on line 64
+[23-Sep-2016 11:43:45 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'psmedia'@'localhost' (using password: NO) in /home/psmedia/public_html/acura/admin@@/index.php on line 64
+[23-Sep-2016 11:43:45 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/psmedia/public_html/acura/admin@@/index.php on line 64
+[24-Sep-2016 12:35:04 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[24-Sep-2016 12:35:04 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[26-Sep-2016 15:08:55 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[26-Sep-2016 15:08:55 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 10:38:06 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 10:38:06 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 19:06:57 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 19:06:57 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 20:07:46 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 20:07:46 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 22:55:43 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 22:55:43 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 23:40:30 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[27-Sep-2016 23:40:30 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 06:26:14 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 06:26:14 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 07:50:43 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 07:50:43 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 09:34:13 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 09:34:13 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 09:47:45 Asia/Saigon] PHP Warning:  mysql_query(): Access denied for user 'acura'@'localhost' (using password: NO) in /home/acura/public_html/admin@@/index.php on line 64
+[28-Sep-2016 09:47:45 Asia/Saigon] PHP Warning:  mysql_query(): A link to the server could not be established in /home/acura/public_html/admin@@/index.php on line 64

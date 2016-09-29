@@ -1,0 +1,2 @@
+[19-Sep-2016 02:14:01 UTC] PHP Warning:  chmod() has been disabled for security reasons in /home/psmedia/public_html/acura/admin@@/ckfinder/core/connector/php/php5/CommandHandler/FileUpload.php on line 171
+[19-Sep-2016 02:14:01 UTC] PHP Warning:  chmod() has been disabled for security reasons in /home/psmedia/public_html/acura/admin@@/ckfinder/core/connector/php/php5/CommandHandler/Thumbnail.php on line 273
