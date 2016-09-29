@@ -100,7 +100,7 @@ class contact{
                             </div>
                             <div class="form-group">
                                 <label>Điện Thoại</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="phone" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label>Địa Chỉ</label>

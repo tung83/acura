@@ -77,6 +77,7 @@ function contact($db)
 							<th>Họ&Tên</th>
 							<th>Địa chỉ</th>							
 							<th>Email</th>
+                                                        <th>Điện thoại</th>
 							<th>Chủ đề</th>
 							<th width="40%">Nội dung</th>
 							<th style="width:10% !important">Options</th>
@@ -97,7 +98,8 @@ function contact($db)
 			<td>'.$item['id'].'</td>
 			<td>'.$item['name'].'</td>
 			<td>'.$item['adds'].'</td>
-			<td><a href="mailto:'.$item['email'].'">'.$item['email'].'</a></td>
+			<td><a href="mailto:'.$item['email'].'">'.$item['email'].'</a></td>                            
+			<td>'.$item['phone'].'</td>
 			<td>'.$item['subject'].'</td>
 			<td>'.nl2br($item['content']).'</td>
 			<td align="center">

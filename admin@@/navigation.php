@@ -14,7 +14,7 @@ function ad_menu()
                     //array(9,'Video','video','youtube'),
                     /*array(14,'Hỗ trợ trực tuyến','support_online','headphones'),*/
                     //array(14,'Đặt hàng','cart','shopping-cart'),
-                    array(7,'Liên hệ','contact','plus'),                    
+                    array(7,'Khách Hàng liên hệ','contact','plus'),                    
                     array(11,"Pages SEO","seo","fire"),
                     array(12,"Quản lý text","qtext","music"),
                     array(15,"Cấu hình cơ bản","basic_config","cog")
