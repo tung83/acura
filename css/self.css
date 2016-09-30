@@ -62,7 +62,7 @@ a:hover{
 
 header{
     padding-top:20px;
-    background:url(/file/self/header_background.jpg) repeat-x top center;
+    background:url(/file/self/header_background.png) repeat top left;
     border-bottom:2px solid #7b4033;
     height:123px
 }
@@ -112,7 +112,7 @@ form.search input[type="text"]{
     color:#fff9ae;
 }
 section#ind-about{
-    background:#030100;
+    background:#660000;
     padding:50px 0px;
     color:#fff !important
 }
@@ -169,7 +169,7 @@ section#about-us{
     padding:30px 0px
 }
 section#ind-slider{
-    background:#000 url(/file/self/slider_background.jpg) no-repeat top center
+    background:#000 url(/file/self/slider_background.png) repeat top center
 }
 .contact-background{
     background:#000 url(/file/self/contact_background.jpg) no-repeat top center;
