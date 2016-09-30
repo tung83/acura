@@ -344,3 +344,12 @@ h2.title{
     padding: 0;
     margin: 40px 0;
 }
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    background-color: #712818;
+    border-color: #712818;
+    color: #fff !important;
+}
+#recent-works .pagination-css{
+    color: #712818;
+}
