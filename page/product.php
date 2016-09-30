@@ -249,6 +249,29 @@ class product{
         $pg=new Pagination(array('limit'=>1,'count'=>20,'page'=>$page,'type'=>0));
         $pg->set_url(array('def'=>'index.php','url'=>'index.php?page=[p]'));
         $str.=$pg->process();*/
+          
+        $pg = new Pagination();    
+        $pg->pagenumber = $page;
+        $pg->pagesize = pd_lim;
+        $pg->totalrecords = $count;
+        $pg->showfirst = true;
+        $pg->showlast = true;
+        $pg->paginationcss = "pagination-large";
+        $pg->paginationstyle = 1; // 1: advance, 0: normal
+        if(!$pId || $pId==0){
+            $pg->defaultUrl = myWeb.$this->view;
+            $pg->paginationUrl = myWeb.$this->view."/[p]";            
+        }else{
+            $cate=$this->db->where('id',$pId)->getOne('product_cate','id, title');
+            
+            $pg->defaultUrl = myWeb.$this->view.'/'.common::slug($cate['title']).'-p'.$cate['id'];
+            $pg->paginationUrl = $pg->defaultUrl ."/[p]";
+        }     
+        $str.= '<div class= "col-md-12 text-center">
+                  <div class="pagination pagination-centered">'
+                        .$pg->process()
+                    .'</div>
+                    </div>'; 
         $str.='
             </div>
         </section>';
@@ -299,6 +322,7 @@ class product{
         <div>
                   
         </div>       ';
+          
         if(count($list)>0){
             $str.='
             <div class="wow fadeInDown row">
