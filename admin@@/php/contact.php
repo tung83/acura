@@ -5,8 +5,9 @@ function mainProcess($db)
 }
 
 function contact($db)
-{
-	$msg='';
+{    
+    $act='contact';
+    $msg='';
     $table='contact';
 	if(isset($_POST["addNew"])||isset($_POST["update"]))
 	{

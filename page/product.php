@@ -290,7 +290,8 @@ class product{
                 <!--b>Giá Bán Lẻ: <em>'.number_format($item['price'],0,',','.').'VNĐ</em></b-->
                 <!--form action="javascript:add_cart('.$item['id'].',1)">
                     <button class="btn btn-default"><i class="fa fa-shopping-cart"></i> Mua Hàng</button>
-                </form-->
+                </form-->                
+                <p>'.$item['feature'].'</p>
                 <p>'.$item['content'].'</p>
                 </article>
             </div>
