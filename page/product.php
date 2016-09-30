@@ -52,6 +52,7 @@ class product{
         <div class="product-background hidden-xs hidden-sm">
             
         </div>
+        <a name="product-list"> </a>
         <div class="text-center">        
             <h2 class="title">'.$this->title.'</h2>
         </div> ';
@@ -244,12 +245,7 @@ class product{
            $str.='
            </div>'; 
         }  
-        /*$pagenumber = $page;
-        $totalrecords = $count;
-        $pg=new Pagination(array('limit'=>1,'count'=>20,'page'=>$page,'type'=>0));
-        $pg->set_url(array('def'=>'index.php','url'=>'index.php?page=[p]'));
-        $str.=$pg->process();*/
-          
+        
         $pg = new Pagination();    
         $pg->pagenumber = $page;
         $pg->pagesize = pd_lim;
@@ -260,12 +256,12 @@ class product{
         $pg->paginationstyle = 1; // 1: advance, 0: normal
         if(!$pId || $pId==0){
             $pg->defaultUrl = myWeb.$this->view;
-            $pg->paginationUrl = myWeb.$this->view."/[p]";            
+            $pg->paginationUrl = myWeb.$this->view."/[p]#product-list";            
         }else{
             $cate=$this->db->where('id',$pId)->getOne('product_cate','id, title');
             
             $pg->defaultUrl = myWeb.$this->view.'/'.common::slug($cate['title']).'-p'.$cate['id'];
-            $pg->paginationUrl = $pg->defaultUrl ."/[p]";
+            $pg->paginationUrl = $pg->defaultUrl ."/[p]#product-list";
         }     
         $str.= '<div class= "col-md-12 text-center">
                   <div class="pagination pagination-centered">'
